@@ -2,7 +2,7 @@
 OIF (Output It Forward) is a Chrome extension that helps researchers detect and document open data indicators in scholarly articles while they browse. As you read a paper, OIF automatically scans the page for phrases and repository links commonly associated with open data practices, and logs matches to a running CSV file for systematic documentation.
 OIF is designed with adaptability in mind: its phrase list and repository domain list are plain, editable text files, so tailoring the extension to your discipline requires no programming expertise, just edit a list.
 
-Overview
+# Overview
 When reviewing large volumes of scholarly literature, manually identifying open data indicators is time-consuming and error-prone. OIF automates this process by scanning article pages (including PDFs) for:
 
   Key phrases associated with open data practices: including formal section headers (e.g., "Data Availability Statement"), open-science badge language (e.g., "Open Data", "Open Materials"), generic sharing language (e.g., "openly available", "upon reasonable request"), and pre-registration terms (e.g., "preregistered", "Registered Report")
@@ -12,7 +12,7 @@ When reviewing large volumes of scholarly literature, manually identifying open 
 
 OIF works on both HTML article pages and PDFs (via a built-in PDF viewer). Detected indicators are logged automatically to a cumulative record stored in your browser, which you can download at any time as a CSV file with the following columns: article title, page URL, trigger sentences, repository tokens, and all plain-text URLs. The log accumulates across sessions, making OIF suitable for systematic reviews, meta-science studies, and audits of open data compliance.
 
-Installation
+# Installation
 
   Option 1: Chrome Web Store (recommended)
   Install OIF directly from the Chrome Web Store:
@@ -28,7 +28,7 @@ Installation
 
 Note: Because OIF is loaded as an unpacked extension, you will need to reload it manually after any updates by returning to chrome://extensions/ and clicking the reload icon next to OIF.
 
-How to Use
+# How to Use
 
 Navigate to any scholarly article page (HTML or PDF) in Chrome.
 Click the OIF icon in your toolbar to open the popup.
@@ -55,7 +55,7 @@ Phrase list: Find the phrases array near the top of content.js. Add, remove, or 
 Repository domain list: Find the REPO_PATTERN regular expression in content.js. Add new domains by inserting them into the pattern (e.g., |mynewrepo\.org).
 After editing, reload the extension in chrome://extensions/ by clicking the reload icon next to OIF.
 
-How to Contribute
+# How to Contribute
 
 Community contributions are warmly welcomed and are essential to keeping OIF's coverage broad and current.
 If you come across a phrase or repository domain that OIF is missing, you can:
@@ -65,12 +65,12 @@ Submit a pull request with your proposed addition to the phrases array or REPO_P
 
 We will review and incorporate suggestions into periodic updates of the extension. This collaborative model is intentional: OIF is built around the same open science values it is designed to support.
 
-Citation
+# Citation
 If you use OIF in your research, please cite:
 
 Coming soon!
 
 A preprint or DOI link will be added here upon publication.
 
-License
+# License
 This project is licensed under the MIT License.
