@@ -1,0 +1,30 @@
+# OIF — Source Code
+
+This branch contains the source code for the OIF (Output It Forward) Chrome extension (Manifest V3).
+
+## File structure
+
+| File | Role |
+|---|---|
+| `manifest.json` | Extension configuration (Manifest V3) |
+| `content.js` | Injected into HTML pages; contains the phrase list, repository domain pattern, and all detection logic |
+| `background.js` | Service worker; proxies PDF fetches to handle cross-origin requests |
+| `popup.html` / `popup.js` | Extension popup UI; displays results, manages storage, and exports CSV |
+| `viewer.html` / `viewer.js` | Built-in PDF viewer with OIF results sidebar |
+| `pdf.min.js` / `pdf_worker_min.js` | PDF.js library used to render and extract text from PDFs |
+| `icon.png` | Extension icon |
+
+## Key locations for contributors
+
+- **Phrase list:** `phrases` array in `content.js`
+- **Repository domain pattern:** `REPO_PATTERN` regex in `content.js`
+
+Both are plain text and can be edited without programming expertise.
+
+## Loading the extension locally
+
+1. Go to `chrome://extensions/` and enable **Developer mode**.
+2. Click **Load unpacked** and select this folder.
+3. After any edits, click the reload icon next to OIF in `chrome://extensions/`.
+
+For full usage documentation, see the [main branch README](../README.md).
